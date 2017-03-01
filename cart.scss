@@ -16,6 +16,7 @@ body{
   margin-left: 0;
   margin-right: 0;
   min-width: 768px;
+  color: $color_default;
   h2{
     //background: $white;
     color: $color_bg;
@@ -44,6 +45,9 @@ body{
       //vertical-align: middle;
     }
   }
+  div.lists{
+    padding: 20px 0;
+  }
   ul.title{
     background-color: $color_bg;
     color: $white;
@@ -52,10 +56,9 @@ body{
     }
   }
   ul.list{
-    padding: 80px 0;
+    padding: 30px 0;
     overflow: hidden;
     line-height: 120px;
-    border-bottom: 1px solid $color_light;
     li:first-child{
       width: 10%;
     }
@@ -72,13 +75,17 @@ body{
         .name{
           //margin-top: -50px;
         }
-        .parts{
-          //margin-top: -50px;
+        .parts span{
+          margin-right: 10px;
+          font-size: 14px;
+          color: $color_light;
+
         }
       }
       img{
         width: 120px;
         height: 120px;
+        //border: 1px solid $color_light;
         float: left;
         margin-right: 15px;
       }
@@ -98,44 +105,53 @@ body{
       font-size: 22px;
       cursor: pointer;
       opacity: 0.6;
-    }
-
-  }
-  .left{
-
-    float: left;
-    margin-left: 4.5%;
-    label{
-      color: $color_danger;
-    }
-  }
-  .right{
-    width: 30%;
-    float: right;
-    button{
-      background-color: $color_danger;
-      color: $white;
-      border: none;
-      border-radius: 2px;
-      width: 80px;
-      height: 35px;
-      font-size: 16px;
-      cursor: pointer;
-      &:focus,&:active{
-        outline: none;
-        background-color: #fb3d53;
-
+      &:hover{
+        opacity: 0.5;
       }
     }
 
-    label{
-      span{
-        color: $color_danger
-      }
+  }
+  .footer{
+    border-top: 1px solid $color_light;
+    padding: 10px 0;
+    .left{
+
       float: left;
-      width: 50%;
+      margin-left: 4.5%;
+      label{
+        color: $color_danger;
+      }
     }
+    .right{
+      width: 30%;
+      float: right;
+      button{
+        background-color: $color_danger;
+        color: $white;
+        border: none;
+        border-radius: 2px;
+        width: 80px;
+        height: 35px;
+        font-size: 16px;
+        cursor: pointer;
+        &:focus,&:active{
+          outline: none;
+          background-color: #fb3d53;
+
+        }
+      }
+
+      label{
+        span{
+          color: $color_danger
+        }
+        float: left;
+        width: 50%;
+      }
+    }
+
   }
+
 
 }
 

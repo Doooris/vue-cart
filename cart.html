@@ -12,39 +12,40 @@
 </head>
 <body>
   <div id="cart">
-    <h1>{{title}}</h1>
     <div class="title_box">
     <h2>购物车</h2>
     </div>
     <ul class="title clearfix">
       <li>商品信息</li>
-      <li>商品金额</li>
+      <li>商品单价</li>
       <li>商品数量</li>
       <li>总金额</li>
       <li>编辑</li>
     </ul>
-    <ul class="list">
-      <li class="status"><input type="radio"></li>
-      <li class="info">
-        <img src="" alt="">
-        <div class="info_right">
-          <p class="name">香烟</p>
-          <div class="parts">
-            <span>赠送:</span><span>打火机</span>
+    <div class="lists">
+      <ul class="list" v-for="item in proList">
+        <li class="status"><input type="radio"></li>
+        <li class="info">
+          <img v-bind:src="item.proImg" alt="product'picture">
+          <div class="info_right">
+            <p class="name" v-text="item.proName"></p>
+            <div class="parts">
+              <span>赠送:</span><span v-for="part in item.parts" v-text="part.partsName"></span>
+            </div>
           </div>
-        </div>
-      </li>
-      <li class="price">19</li>
-      <li class="quantity"> <span>-</span> <input type="text"> <span>+</span></li>
-      <li class="item_price">0</li>
-      <li class="edit"> <i class="fa fa-trash"></i></li>
-    </ul>
-    <div>
+        </li>
+        <li class="price" v-text="item.proPrice"></li>
+        <li class="quantity"> <span>-</span> <input type="text" v-model="item.proQuantity"> <span>+</span></li>
+        <li class="item_price">{{item.proPrice*item.proQuantity}}</li>
+        <li class="edit"> <i class="fa fa-trash"></i></li>
+      </ul>
+    </div>
+    <div class="footer clearfix">
       <div class="left">
         <input type="radio" id="choose_all"><label for="choose_all">全选</label>
       </div>
       <div class="right">
-        <label class="totalMoney">合计: <span>0.00</span></label>
+        <label class="totalMoney">合计: <span v-text="totalMoney"></span></label>
         <button>结账</button>
       </div>
     </div>

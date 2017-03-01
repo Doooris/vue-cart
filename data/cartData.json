@@ -7,12 +7,15 @@
         "proId": "6101101",
         "proName": "香烟",
         "proPrice": 20,
-        "proQuantity": 1,
-        "proImg": "../img/cigarate.jpeg",
+        "proQuantity": 3,
+        "proImg": "img/cigarate.jpeg",
         "parts": [
           {
             "partsId": "10001",
             "partsName": "打火机"
+          },{
+            "partsId": "10002",
+            "partsName": "钢化膜"
           }
         ]
       },{
@@ -20,7 +23,7 @@
         "proName": "挂烫机",
         "proPrice": 399,
         "proQuantity": 1,
-        "proImg": "../img/machine.jpeg",
+        "proImg": "img/machine.jpg",
         "parts": [
           {
             "partsId": "10002",
@@ -33,7 +36,7 @@
         "proName": "风衣",
         "proPrice": 199,
         "proQuantity": 1,
-        "proImg": "../img/wear.jpeg",
+        "proImg": "img/wear.jpeg",
         "parts": [
           {
             "partsId": "10005",
@@ -44,8 +47,8 @@
         "proId": "6101104",
         "proName": "运动鞋",
         "proPrice": 99,
-        "proQuantity": 1,
-        "proImg": "../img/shose.jpeg",
+        "proQuantity": 2,
+        "proImg": "img/shose.jpeg",
         "parts": [
           {
             "partsId": "10008",
