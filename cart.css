@@ -1,0 +1,91 @@
+body {
+  padding-top: 100px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 768px; }
+  body h2 {
+    color: #6C6C6C;
+    margin-top: -60px;
+    padding: 20px;
+    display: inline-block;
+    background: #ffffff; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+#cart {
+  text-align: center;
+  border-top: 1px solid #B3B3B3; }
+  #cart ul {
+    list-style: none;
+    display: block;
+    padding: 15px; }
+    #cart ul li {
+      float: left;
+      width: 15%; }
+  #cart ul.title {
+    background-color: #6C6C6C;
+    color: #ffffff; }
+    #cart ul.title li:first-child {
+      width: 40%; }
+  #cart ul.list {
+    padding: 80px 0;
+    overflow: hidden;
+    line-height: 120px;
+    border-bottom: 1px solid #B3B3B3; }
+    #cart ul.list li:first-child {
+      width: 10%; }
+    #cart ul.list li:nth-child(2) {
+      width: 30%;
+      height: 120px; }
+      #cart ul.list li:nth-child(2) .info_right {
+        text-align: left;
+        position: relative;
+        height: 120px;
+        margin-top: -50px;
+        line-height: 85px; }
+      #cart ul.list li:nth-child(2) img {
+        width: 120px;
+        height: 120px;
+        float: left;
+        margin-right: 15px; }
+    #cart ul.list li.quantity span {
+      cursor: pointer; }
+    #cart ul.list li.quantity input {
+      text-align: center;
+      width: 30px;
+      height: 20px; }
+    #cart ul.list li.edit i {
+      font-size: 22px;
+      cursor: pointer;
+      opacity: 0.6; }
+  #cart .left {
+    float: left;
+    margin-left: 4.5%; }
+    #cart .left label {
+      color: #E2374B; }
+  #cart .right {
+    width: 30%;
+    float: right; }
+    #cart .right button {
+      background-color: #E2374B;
+      color: #ffffff;
+      border: none;
+      border-radius: 2px;
+      width: 80px;
+      height: 35px;
+      font-size: 16px;
+      cursor: pointer; }
+      #cart .right button:focus, #cart .right button:active {
+        outline: none;
+        background-color: #fb3d53; }
+    #cart .right label {
+      float: left;
+      width: 50%; }
+      #cart .right label span {
+        color: #E2374B; }
+
+/*# sourceMappingURL=cart.css.map */

@@ -1,0 +1,141 @@
+$color_default : #494949;
+$color_bg: #6C6C6C;
+$color_light : #B3B3B3;
+$color_danger : #E2374B;
+$color_orange : #E59B66;
+$white: #ffffff;
+
+
+
+@mixin bTop($color){
+  border-top: 1px solid $color;
+}
+body{
+  padding-top: 100px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 768px;
+  h2{
+    //background: $white;
+    color: $color_bg;
+    margin-top: -60px;
+    padding: 20px;
+    display: inline-block;
+    background: $white;
+  }
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+#cart{
+  text-align: center;
+  @include bTop($color_light);
+  ul{
+    list-style: none;
+    display: block;
+    padding: 15px;
+    li{
+      float: left;
+      width: 15%;
+      //display: inline-block;
+      //vertical-align: middle;
+    }
+  }
+  ul.title{
+    background-color: $color_bg;
+    color: $white;
+    li:first-child{
+      width: 40%;
+    }
+  }
+  ul.list{
+    padding: 80px 0;
+    overflow: hidden;
+    line-height: 120px;
+    border-bottom: 1px solid $color_light;
+    li:first-child{
+      width: 10%;
+    }
+    li:nth-child(2){
+      //border: 1px solid red;
+      width: 30%;
+      height: 120px;
+      .info_right{
+        text-align: left;
+        position: relative;
+        height: 120px;
+        margin-top: -50px;
+        line-height: 85px;
+        .name{
+          //margin-top: -50px;
+        }
+        .parts{
+          //margin-top: -50px;
+        }
+      }
+      img{
+        width: 120px;
+        height: 120px;
+        float: left;
+        margin-right: 15px;
+      }
+    }
+    li.quantity{
+      span{
+        cursor: pointer;
+      }
+      input{
+        text-align: center;
+        width: 30px;
+        height: 20px;
+      }
+
+    }
+    li.edit i{
+      font-size: 22px;
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+  }
+  .left{
+
+    float: left;
+    margin-left: 4.5%;
+    label{
+      color: $color_danger;
+    }
+  }
+  .right{
+    width: 30%;
+    float: right;
+    button{
+      background-color: $color_danger;
+      color: $white;
+      border: none;
+      border-radius: 2px;
+      width: 80px;
+      height: 35px;
+      font-size: 16px;
+      cursor: pointer;
+      &:focus,&:active{
+        outline: none;
+        background-color: #fb3d53;
+
+      }
+    }
+
+    label{
+      span{
+        color: $color_danger
+      }
+      float: left;
+      width: 50%;
+    }
+  }
+
+}
+

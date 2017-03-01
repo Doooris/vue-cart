@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="zh-CN"/>
+  <meta name="Author" content="Doris"/>
+  <meta name="keywords" content="cart,vue"/>
+  <meta name="description" content="this is a cart"/>
+  <title>Cart</title>
+  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+  <link type="text/css" rel="stylesheet" href="./css/cart.css"/>
+</head>
+<body>
+  <div id="cart">
+    <h1>{{title}}</h1>
+    <div class="title_box">
+    <h2>购物车</h2>
+    </div>
+    <ul class="title clearfix">
+      <li>商品信息</li>
+      <li>商品金额</li>
+      <li>商品数量</li>
+      <li>总金额</li>
+      <li>编辑</li>
+    </ul>
+    <ul class="list">
+      <li class="status"><input type="radio"></li>
+      <li class="info">
+        <img src="" alt="">
+        <div class="info_right">
+          <p class="name">香烟</p>
+          <div class="parts">
+            <span>赠送:</span><span>打火机</span>
+          </div>
+        </div>
+      </li>
+      <li class="price">19</li>
+      <li class="quantity"> <span>-</span> <input type="text"> <span>+</span></li>
+      <li class="item_price">0</li>
+      <li class="edit"> <i class="fa fa-trash"></i></li>
+    </ul>
+    <div>
+      <div class="left">
+        <input type="radio" id="choose_all"><label for="choose_all">全选</label>
+      </div>
+      <div class="right">
+        <label class="totalMoney">合计: <span>0.00</span></label>
+        <button>结账</button>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/vue.min.js"></script>
+  <script type="text/javascript" src="js/vue-resource.min.js"></script>
+  <script type="text/javascript" src="js/cart.js"></script>
+
+</body>
+</html>

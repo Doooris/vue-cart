@@ -1,0 +1,59 @@
+{
+  "status": 1,
+  "result": {
+    "totalMoney": 580,
+    "list": [
+      {
+        "proId": "6101101",
+        "proName": "香烟",
+        "proPrice": 20,
+        "proQuantity": 1,
+        "proImg": "../img/cigarate.jpeg",
+        "parts": [
+          {
+            "partsId": "10001",
+            "partsName": "打火机"
+          }
+        ]
+      },{
+        "proId": "6101102",
+        "proName": "挂烫机",
+        "proPrice": 399,
+        "proQuantity": 1,
+        "proImg": "../img/machine.jpeg",
+        "parts": [
+          {
+            "partsId": "10002",
+            "partsName": "钢化膜"
+          }
+        ]
+
+      },{
+        "proId": "6101103",
+        "proName": "风衣",
+        "proPrice": 199,
+        "proQuantity": 1,
+        "proImg": "../img/wear.jpeg",
+        "parts": [
+          {
+            "partsId": "10005",
+            "partsName": "雨伞"
+          }
+        ]
+      },{
+        "proId": "6101104",
+        "proName": "运动鞋",
+        "proPrice": 99,
+        "proQuantity": 1,
+        "proImg": "../img/shose.jpeg",
+        "parts": [
+          {
+            "partsId": "10008",
+            "partsName": "剪刀"
+          }
+        ]
+      }
+    ]
+  },
+  "message": ""
+}
