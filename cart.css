@@ -11,6 +11,19 @@ body {
     padding: 20px;
     display: inline-block;
     background: #ffffff; }
+  body .check_btn {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #B3B3B3; }
+    body .check_btn i {
+      position: absolute;
+      color: #E2374B;
+      margin-left: -7px;
+      margin-top: -2px;
+      visibility: hidden; }
+  body .checked i {
+    visibility: visible; }
 
 .clearfix:after {
   content: '';
@@ -59,7 +72,9 @@ body {
         float: left;
         margin-right: 15px; }
     #cart ul.list li.quantity span {
-      cursor: pointer; }
+      cursor: pointer;
+      width: 30px;
+      display: inline-block; }
     #cart ul.list li.quantity input {
       text-align: center;
       width: 30px;
@@ -67,19 +82,22 @@ body {
     #cart ul.list li.edit i {
       font-size: 22px;
       cursor: pointer;
-      opacity: 0.6; }
+      opacity: 0.5; }
       #cart ul.list li.edit i:hover {
-        opacity: 0.5; }
+        opacity: 0.4; }
+    #cart ul.list li.item_price {
+      color: #E2374B; }
   #cart .footer {
     border-top: 1px solid #B3B3B3;
     padding: 10px 0; }
     #cart .footer .left {
       float: left;
       margin-left: 4.5%; }
-      #cart .footer .left label {
+      #cart .footer .left span {
+        margin-left: 10px;
         color: #E2374B; }
     #cart .footer .right {
-      width: 30%;
+      width: 45%;
       float: right; }
       #cart .footer .right button {
         background-color: #E2374B;
@@ -93,9 +111,16 @@ body {
         #cart .footer .right button:focus, #cart .footer .right button:active {
           outline: none;
           background-color: #fb3d53; }
+      #cart .footer .right .kinds {
+        display: inline-block;
+        width: 33%;
+        float: left; }
+        #cart .footer .right .kinds span {
+          color: #E2374B;
+          margin: 0 8px 0 5px; }
       #cart .footer .right label {
-        float: left;
-        width: 50%; }
+        width: 33%;
+        float: left; }
         #cart .footer .right label span {
           color: #E2374B; }
 

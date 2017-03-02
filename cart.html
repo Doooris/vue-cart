@@ -24,7 +24,8 @@
     </ul>
     <div class="lists">
       <ul class="list" v-for="item in proList">
-        <li class="status"><input type="radio"></li>
+        <li class="status"><a href="javascript:;" class="check_btn" v-bind:class="{checked: item.checked}" @click="toggleChecked(item)"><i class="fa fa-check"></i></a></li>
+
         <li class="info">
           <img v-bind:src="item.proImg" alt="product'picture">
           <div class="info_right">
@@ -34,18 +35,23 @@
             </div>
           </div>
         </li>
-        <li class="price" v-text="item.proPrice"></li>
-        <li class="quantity"> <span>-</span> <input type="text" v-model="item.proQuantity"> <span>+</span></li>
-        <li class="item_price">{{item.proPrice*item.proQuantity}}</li>
+        <li class="price">{{item.proPrice | formatMoney('元')}}</li>
+        <li class="quantity">
+          <span @click="changeQuantity(item,-1)">-</span>
+          <input type="text" v-model="item.proQuantity">
+          <span @click="changeQuantity(item,1)">+</span>
+        </li>
+        <li class="item_price">{{item.proPrice*item.proQuantity | formatMoney}}</li>
         <li class="edit"> <i class="fa fa-trash"></i></li>
       </ul>
     </div>
     <div class="footer clearfix">
       <div class="left">
-        <input type="radio" id="choose_all"><label for="choose_all">全选</label>
+        <a href="javascript:;" class="check_btn" v-bind:class="{checked: checked_all}" @click="toggleChecked_all()"><i class="fa fa-check"></i></a><span>全选</span>
       </div>
-      <div class="right">
-        <label class="totalMoney">合计: <span v-text="totalMoney"></span></label>
+      <div class="right clearfix">
+        <div class="kinds">已选商品: <span>{{kinds}}</span>件</div>
+        <label class="totalMoney">合计: <span>{{totalMoney | formatMoney}}</span></label>
         <button>结账</button>
       </div>
     </div>
