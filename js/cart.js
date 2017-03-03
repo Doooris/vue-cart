@@ -9,8 +9,7 @@
     checked_all: false,
     kinds: 0,
     deleteFlag: false,
-    currentItem: "",
-
+    currentIndex: "",
   },
   filters: {
     formatMoney: function(value){
@@ -51,6 +50,12 @@
       if(obj.checked == false){
         this.checked_all = false;
       }
+      var r = this.proList.every(item=>{
+        return(item.checked == true)
+      })
+      if(r){
+        this.checked_all = true;
+      }
       this.calTotalMoney();
       this.calKinds();
     },
@@ -74,7 +79,6 @@
         }
 
       })
-
     },
     calKinds: function(){
       this.kinds = 0;
@@ -84,19 +88,14 @@
         }
     })
     },
-    currItem: function(item){
-      this.deleteFlag = true;
-      this.currentItem = item;
-    },
     deleteItem: function(){
-      var index = this.proList.indexOf(this.currentItem);
-      this.proList.splice(index,1);
+      this.proList.splice(this.currentIndex,1);
       this.deleteFlag = false;
       this.calTotalMoney();
       this.calKinds();
     }
 }});
-Vue.filter("formatMoney",function(value,type){
-  return "¥" + value.toFixed(2) + type;
-
-})
+//Vue.filter("formatMoney",function(value,type){
+//  return "¥" + value.toFixed(2) + type;
+//
+//})

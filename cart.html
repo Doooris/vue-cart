@@ -23,7 +23,7 @@
       <li>编辑</li>
     </ul>
     <div class="lists">
-      <ul class="list" v-for="item in proList">
+      <ul class="list" v-for="(item,index) in proList">
         <li class="status"><a href="javascript:;" class="check_btn" v-bind:class="{checked: item.checked}" @click="toggleChecked(item)"><i class="fa fa-check"></i></a></li>
         <li class="info">
           <img v-bind:src="item.proImg" alt="product'picture">
@@ -41,7 +41,7 @@
           <span @click="changeQuantity(item,1)">+</span>
         </li>
         <li class="item_price">{{item.proPrice*item.proQuantity | formatMoney}}</li>
-        <li class="edit"><i class="fa fa-trash" @click="currItem(item)"></i></li>
+        <li class="edit"><i class="fa fa-trash" @click="deleteFlag=true;currentIndex=index"></i></li>
       </ul>
     </div>
     <div class="footer clearfix">
