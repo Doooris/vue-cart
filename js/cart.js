@@ -8,6 +8,8 @@
     proList: [],
     checked_all: false,
     kinds: 0,
+    deleteFlag: false,
+    currentItem: "",
 
   },
   filters: {
@@ -81,6 +83,17 @@
           this.kinds ++;
         }
     })
+    },
+    currItem: function(item){
+      this.deleteFlag = true;
+      this.currentItem = item;
+    },
+    deleteItem: function(){
+      var index = this.proList.indexOf(this.currentItem);
+      this.proList.splice(index,1);
+      this.deleteFlag = false;
+      this.calTotalMoney();
+      this.calKinds();
     }
 }});
 Vue.filter("formatMoney",function(value,type){

@@ -19,13 +19,12 @@
       <li>商品信息</li>
       <li>商品单价</li>
       <li>商品数量</li>
-      <li>总金额</li>
+      <li>金额</li>
       <li>编辑</li>
     </ul>
     <div class="lists">
       <ul class="list" v-for="item in proList">
         <li class="status"><a href="javascript:;" class="check_btn" v-bind:class="{checked: item.checked}" @click="toggleChecked(item)"><i class="fa fa-check"></i></a></li>
-
         <li class="info">
           <img v-bind:src="item.proImg" alt="product'picture">
           <div class="info_right">
@@ -42,7 +41,7 @@
           <span @click="changeQuantity(item,1)">+</span>
         </li>
         <li class="item_price">{{item.proPrice*item.proQuantity | formatMoney}}</li>
-        <li class="edit"> <i class="fa fa-trash"></i></li>
+        <li class="edit"><i class="fa fa-trash" @click="currItem(item)"></i></li>
       </ul>
     </div>
     <div class="footer clearfix">
@@ -52,9 +51,24 @@
       <div class="right clearfix">
         <div class="kinds">已选商品: <span>{{kinds}}</span>件</div>
         <label class="totalMoney">合计: <span>{{totalMoney | formatMoney}}</span></label>
-        <button>结账</button>
+        <a href="">结账</a>
       </div>
     </div>
+    <div class="model_outter" v-if="deleteFlag">
+      <div class="model_inner">
+        <div class="model_top">
+          <span class="close" @click="deleteFlag=false"></span>
+        </div>
+        <div class="model_content">
+          <p>您确定删除此订单信息吗?</p>
+        </div>
+        <div class="btns">
+          <button class="btn btn_delete" @click="deleteItem()">Delete</button>
+          <button class="btn btn_cancel" @click="deleteFlag=false">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="md_overlay" v-if="deleteFlag"></div>
   </div>
   <script type="text/javascript" src="js/vue.min.js"></script>
   <script type="text/javascript" src="js/vue-resource.min.js"></script>
